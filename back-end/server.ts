@@ -19,3 +19,6 @@ app.use('/api/project',projectRoutes);
 app.use('/api/bid',bidRoutes);
 app.use('/api/deliverable',deliverableRoute);
 
+app.listen(5000,()=>{
+    console.log(`Server is running on port 5000`);
+})
