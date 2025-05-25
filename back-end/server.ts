@@ -5,11 +5,12 @@ import bidRoutes from './routes/bidRoutes'
 import deliverableRoute from './routes/deliverableRoutes';
 import cookieParser from 'cookie-parser';
 import cors from 'cors';
-
+import dotenv from 'dotenv';
+dotenv.config();
 const app=express();
 
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin:`${process.env.CORS_URI}`,
     credentials: true,
 }));
 app.use(cookieParser());
