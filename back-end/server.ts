@@ -10,7 +10,7 @@ dotenv.config();
 const app=express();
 
 app.use(cors({
-    origin:`${process.env.CORS_URI}`,
+    origin:`https://freelance-czye.vercel.app/`,
     credentials: true,
 }));
 app.use(cookieParser());
