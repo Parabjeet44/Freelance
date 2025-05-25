@@ -22,7 +22,7 @@ export default function BuyerDashboard() {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await axios.get('http://localhost:5000/api/project/projects', { withCredentials: true })
+        const res = await axios.get(`${process.env.BACK_END}/api/project/projects`, { withCredentials: true })
         setProjects(res.data.project)
       } catch (err) {
         console.error('Error fetching projects:', err)

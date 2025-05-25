@@ -18,7 +18,7 @@ export default function UploadDeliverablePage() {
     const fetchProject = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:5000/api/project/projects/${projectId}`,
+          `${process.env.BACK_END}/api/project/projects/${projectId}`,
           { withCredentials: true }
         );
         setProject(res.data.project);
@@ -45,7 +45,7 @@ export default function UploadDeliverablePage() {
 
     try {
       const res = await axios.post(
-        `http://localhost:5000/api/deliverable/projects/${projectId}/deliverables`,
+        `${process.env.BACK_END}/api/deliverable/projects/${projectId}/deliverables`,
         formData,
         {
           headers: {

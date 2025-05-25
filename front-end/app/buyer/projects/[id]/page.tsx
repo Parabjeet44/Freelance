@@ -35,7 +35,7 @@ export default function ProjectDetailsPage() {
   useEffect(() => {
     const fetchProject = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/project/projects/${id}`, {
+        const res = await axios.get(`${process.env.BACK_END}/api/project/projects/${id}`, {
           withCredentials: true,
         })
         setProject(res.data.project)
@@ -52,7 +52,7 @@ export default function ProjectDetailsPage() {
     setCompleting(true)
     try {
       await axios.put(
-        `http://localhost:5000/api/project/projects/${id}/status`,
+        `${process.env.BACK_END}/api/project/projects/${id}/status`,
         { status: 'COMPLETED' },
         { withCredentials: true }
       )

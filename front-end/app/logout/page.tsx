@@ -9,7 +9,7 @@ export default function LogoutPage() {
   useEffect(() => {
     const logout = async () => {
       try {
-        await axios.post('http://localhost:5000/api/auth/logout') // Make sure this route exists and is connected to your Express backend
+        await axios.post(`${process.env.BACK_END}/api/auth/logout`) // Make sure this route exists and is connected to your Express backend
         router.push('/')
       } catch (error) {
         console.error('Logout failed:', error)

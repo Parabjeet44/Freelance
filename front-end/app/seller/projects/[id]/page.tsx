@@ -31,13 +31,13 @@ export default function ProjectDetailPage() {
     const fetchDetails = async () => {
       try {
         // Fix: Use the correct endpoint for project details
-        const projectRes = await axios.get(`http://localhost:5000/api/bid/projects/${id}/details`, {
+        const projectRes = await axios.get(`${process.env.BACK_END}/api/bid/projects/${id}/details`, {
           withCredentials: true
         })
         setProject(projectRes.data)
 
         // Fix: Use the correct endpoint for bid status
-        const bidStatusRes = await axios.get(`http://localhost:5000/api/bid/projects/${id}/hasBid`, {
+        const bidStatusRes = await axios.get(`${process.env.BACK_END}/api/bid/projects/${id}/hasBid`, {
           withCredentials: true
         })
         setHasBid(bidStatusRes.data.hasBid)
@@ -60,7 +60,7 @@ export default function ProjectDetailPage() {
 
     try {
       // Fix: Include projectId in the request body
-      const res = await axios.post(`http://localhost:5000/api/bid/bids`, {
+      const res = await axios.post(`${process.env.BACK_END}/api/bid/bids`, {
         projectId: id, // Add this line
         amount,
         estimatedTime: time, // Fix: use estimatedTime to match backend

@@ -25,13 +25,13 @@ export default function SellerDashboardPage() {
     const fetchProjects = async () => {
       try {
         const res1 = await axios.get(
-          "http://localhost:5000/api/project/projects/open",
+          `${process.env.BACK_END}/api/project/projects/open`,
           {
             withCredentials: true,
           }
         );
         const res2 = await axios.get(
-          "http://localhost:5000/api/project/projects/my",
+          `${process.env.BACK_END}/api/project/projects/my`,
           {
             withCredentials: true,
           }
