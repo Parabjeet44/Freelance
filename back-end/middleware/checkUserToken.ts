@@ -37,7 +37,7 @@ export function authorizeRole(role: 'BUYER' | 'SELLER') {
     req: Request & { user?: DecodedToken },
     res: Response,
     next: NextFunction
-  ) => {
+  ):any => {
     if (req.user?.role !== role) {
       return res.status(403).json({ message: 'Access forbidden: wrong role' });
     }
