@@ -34,7 +34,7 @@ export default function LoginPage() {
 
     try {
       const res = await axios.post(
-        `${process.env.BACK_END}/api/auth/login`,
+        `${process.env.NEXT_PUBLIC_BACK_END}/api/auth/login`,
         formData,
         { withCredentials: true }
       );

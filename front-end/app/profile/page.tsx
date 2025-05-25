@@ -16,7 +16,7 @@ export default function ProfilePage() {
   useEffect(() => {
     const fetchUserDetails = async () => {
       try {
-        const res = await axios.get(`${process.env.BACK_END}/api/auth/me`, {
+        const res = await axios.get(`${process.env.NEXT_PUBLIC_BACK_END}/api/auth/me`, {
           withCredentials: true, 
         })
 

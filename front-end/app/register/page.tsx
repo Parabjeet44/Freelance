@@ -28,7 +28,7 @@ export default function RegisterPage() {
     setLoading(true)
 
     try {
-      const res = await axios.post(`${process.env.BACK_END}/api/auth/register`, formData)
+      const res = await axios.post(`${process.env.NEXT_PUBLIC_BACK_END}/api/auth/register`, formData)
       router.push('/login')
     } catch (err: any) {
       const message =

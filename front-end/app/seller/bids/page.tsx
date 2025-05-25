@@ -27,7 +27,7 @@ export default function SellerBidsPage() {
   useEffect(() => {
     const fetchBids = async () => {
       try {
-        const res = await axios.get(`${process.env.BACK_END}0/api/bid/bids/mine`, {
+        const res = await axios.get(`${process.env.NEXT_PUBLIC_BACK_END}0/api/bid/bids/mine`, {
           withCredentials: true,
         })
         setBids(res.data.Bids)

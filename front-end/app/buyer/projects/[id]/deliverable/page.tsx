@@ -36,7 +36,7 @@ export default function ProjectDetailsPage() {
     const fetchProjectAndDeliverable = async () => {
       try {
         // Fetch project
-        const projectRes = await axios.get(`${process.env.BACK_END}/api/project/projects/${id}`, {
+        const projectRes = await axios.get(`${process.env.NEXT_PUBLIC_BACK_END}/api/project/projects/${id}`, {
           withCredentials: true,
         })
         const projectData = projectRes.data.project
@@ -45,7 +45,7 @@ export default function ProjectDetailsPage() {
         let deliverableUrl: string | null = null
         try {
           const deliverableRes = await axios.get(
-            `${process.env.BACK_END}/api/deliverable/projects/${id}/deliverables`,
+            `${process.env.NEXT_PUBLIC_BACK_END}/api/deliverable/projects/${id}/deliverables`,
             { withCredentials: true }
           )
           const deliverable = deliverableRes.data.deliverable
@@ -72,7 +72,7 @@ export default function ProjectDetailsPage() {
     setCompleting(true)
     try {
       await axios.put(
-        `${process.env.BACK_END}/api/project/projects/${id}/status`,
+        `${process.env.NEXT_PUBLIC_BACK_END}/api/project/projects/${id}/status`,
         { status: 'COMPLETED' },
         { withCredentials: true }
       )

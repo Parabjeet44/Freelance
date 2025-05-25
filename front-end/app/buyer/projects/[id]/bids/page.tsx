@@ -36,10 +36,10 @@ export default function ProjectBidsPage() {
     const fetchData = async () => {
       try {
         const [projectRes, bidsRes] = await Promise.all([
-          axios.get(`${process.env.BACK_END}/api/project/projects/${id}`, {
+          axios.get(`${process.env.NEXT_PUBLIC_BACK_END}/api/project/projects/${id}`, {
             withCredentials: true,
           }),
-          axios.get(`${process.env.BACK_END}/api/bid/projects/${id}/bids`, {
+          axios.get(`${process.env.NEXT_PUBLIC_BACK_END}/api/bid/projects/${id}/bids`, {
             withCredentials: true,
           }),
         ]);
@@ -60,7 +60,7 @@ export default function ProjectBidsPage() {
     setSelecting(true);
     try {
       const res = await axios.put(
-        `${process.env.BACK_END}/api/project/projects/${id}`,
+        `${process.env.NEXT_PUBLIC_BACK_END}/api/project/projects/${id}`,
         { sellerId },
         {withCredentials:true}
       );

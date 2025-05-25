@@ -28,7 +28,7 @@ export default function NewProjectPage() {
 
     try {
       const res = await axios.post(
-        `${process.env.BACK_END}/api/project/projects`,
+        `${process.env.NEXT_PUBLIC_BACK_END}/api/project/projects`,
         {
           title: form.title,
           description: form.description,

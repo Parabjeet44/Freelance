@@ -18,7 +18,7 @@ export default function UploadDeliverablePage() {
     const fetchProject = async () => {
       try {
         const res = await axios.get(
-          `${process.env.BACK_END}/api/project/projects/${projectId}`,
+          `${process.env.NEXT_PUBLIC_BACK_END}/api/project/projects/${projectId}`,
           { withCredentials: true }
         );
         setProject(res.data.project);
