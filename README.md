@@ -2,14 +2,6 @@
 
 A full-stack web application that connects buyers (clients) with sellers (freelancers) through a comprehensive project bidding system. Built with modern technologies and featuring real-time interactions, secure authentication, and seamless user experience.
 
-## 📸 Screenshots
-
-![Dashboard](https://via.placeholder.com/800x400?text=Buyer+Dashboard)
-*Buyer Dashboard - Manage projects and view bids*
-
-![Projects](https://via.placeholder.com/800x400?text=Seller+Projects)
-*Seller View - Browse and bid on projects*
-
 ## ✨ Features
 
 ### 👤 **Buyer Features**
